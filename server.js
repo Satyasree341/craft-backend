@@ -9,10 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Routes
-app.get('/', (req, res) => {
-    res.send("Backend is running!");
-});
+
 const roomRoutes = require('./routes/roomRoutes');
 app.use('/api/rooms', roomRoutes);
 
